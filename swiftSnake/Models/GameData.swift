@@ -14,6 +14,7 @@ class GameData {
     var highScore: Int
     var lastScore: Int
     var lastPlayed: Date
+    //var allTheBest: [Int] = []
     
     init(highScore: Int = 0, lastScore: Int = 0, lastPlayed: Date = Date()) {
         self.highScore = highScore
