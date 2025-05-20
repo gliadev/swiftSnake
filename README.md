@@ -85,11 +85,13 @@ Combat Life style.
 ## 📸 Capturas
 
 Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
-![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 23 33](https://github.com/user-attachments/assets/eec58cf9-b12d-4b3e-84af-db5d4bcc7dca)
-![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 03](https://github.com/user-attachments/assets/c0908d05-4d8a-43b5-8140-f4ab18f05093)
-![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 27](https://github.com/user-attachments/assets/5e50f0b3-f7cb-47b2-b483-eb1ed9cafe14)
-![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 38](https://github.com/user-attachments/assets/6052d189-66d1-4802-b50b-bbc177f34590)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eec58cf9-b12d-4b3e-84af-db5d4bcc7dca" width="300"/>
+  <img src="https://github.com/user-attachments/assets/c0908d05-4d8a-43b5-8140-f4ab18f05093" width="300"/>
+  <img src="https://github.com/user-attachments/assets/5e50f0b3-f7cb-47b2-b483-eb1ed9cafe14" width="300"/>
+  <img src="https://github.com/user-attachments/assets/6052d189-66d1-4802-b50b-bbc177f34590" width="300"/>
+</p>
 ---
 
 ## 🙌 ¿Te mola?
