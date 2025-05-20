@@ -72,12 +72,6 @@ Son básicos, pero son el inicio para construir una base sólida y bien probada.
 
 ---
 
-## 📸 Capturas
-
-Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
-
----
-
 ## 🧑‍💻 Sobre mí
 
 Desarrollado por [Adolfo Gómez](https://github.com/gliadev)
@@ -85,6 +79,16 @@ Desarrollado por [Adolfo Gómez](https://github.com/gliadev)
 Ex-TES reconvertido en desarrollador iOS, padre a tiempo completo, amante del Deporte y la programación.  
 Ahora lucho mis batallas con código en lugar de con botiquines. Siempre aprendiendo, siempre adelante.  
 Combat Life style.
+
+---
+
+## 📸 Capturas
+
+Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
+![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 23 33](https://github.com/user-attachments/assets/eec58cf9-b12d-4b3e-84af-db5d4bcc7dca)
+![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 03](https://github.com/user-attachments/assets/c0908d05-4d8a-43b5-8140-f4ab18f05093)
+![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 27](https://github.com/user-attachments/assets/5e50f0b3-f7cb-47b2-b483-eb1ed9cafe14)
+![Simulator Screenshot - iPhone 16 Pro - 2025-05-21 at 00 35 38](https://github.com/user-attachments/assets/6052d189-66d1-4802-b50b-bbc177f34590)
 
 ---
 
