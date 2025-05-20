@@ -6,18 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct WelcomeView: View {
-    let topScores = [
-        ("Adolfo", 150),
-        ("Jon", 120),
-        ("Carlos", 100),
-        ("Patatin", 90),
-        ("Patata", 80)
-    ]
+    @Query(sort: [SortDescriptor<ScoreRecord>(\.score, order: .reverse)]) var topScores: [ScoreRecord]
 
     var body: some View {
-        NavigationStack {  // Agregar NavigationStack para gestionar la navegación
+        NavigationStack {
             ZStack {
                 Color.black.ignoresSafeArea()
                 
@@ -28,12 +23,12 @@ struct WelcomeView: View {
                         .bold()
                     
                     Text("🐍")
-                        .font(.system(size: 80)) // Tamaño más grande para el emoji
+                        .font(.system(size: 80))
                     
                     Spacer().frame(height: 40)
 
                     HStack(spacing: 20) {
-                        NavigationLink(destination: GameView()) {  // Usar NavigationLink
+                        NavigationLink(destination: GameView()) {
                             Text("Jugar")
                                 .font(.title)
                                 .frame(width: 200, height: 50)
@@ -41,10 +36,9 @@ struct WelcomeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         }
-                        
-                        Button(action: {
-                            // Acción para ver el ranking
-                        }) {
+        // TODO: Mostrar botón Ranking cuando esté funcional
+                        /*
+                        NavigationLink(destination: RankingView(viewModel: RankingViewModel(from: SnakeGameModel()))) {
                             Text("Ranking")
                                 .font(.title)
                                 .frame(width: 200, height: 50)
@@ -52,6 +46,7 @@ struct WelcomeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         }
+                         */
                     }
 
                     Spacer().frame(height: 40)
@@ -62,8 +57,8 @@ struct WelcomeView: View {
                         .bold()
 
                     VStack {
-                        ForEach(topScores, id: \.0) { score in
-                            Text("\(score.0): \(score.1) puntos")
+                        ForEach(topScores.prefix(5)) { record in
+                            Text("\(record.name): \(record.score) puntos")
                                 .font(.body)
                                 .foregroundColor(.white)
                         }

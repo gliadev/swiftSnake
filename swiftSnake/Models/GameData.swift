@@ -8,9 +8,10 @@
 import Foundation
 import SwiftData
 
-
+  
 @Model
 class GameData {
+    private(set) var id: UUID = UUID()
     var highScore: Int
     var lastScore: Int
     var lastPlayed: Date
