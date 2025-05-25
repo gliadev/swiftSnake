@@ -87,15 +87,9 @@ Combat Life style.
 Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
 
 <p align="center">
-  <video
-    src="![videoLinkedin](https://github.com/user-attachments/assets/fc8b95b6-d94b-4cb4-8a80-f46a6e82d7ec)"
-    width="600"
-    controls
-    playsinline
-    style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.15);"
-  >
-    Tu navegador no admite vídeo HTML5.
-  </video>
+  <p>
+     "![videoLinkedin](https://github.com/user-attachments/assets/fc8b95b6-d94b-4cb4-8a80-f46a6e82d7ec)
+  </p>
 </p>
 
 
