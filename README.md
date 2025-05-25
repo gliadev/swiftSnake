@@ -88,7 +88,7 @@ Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
 
 <p align="center">
   <video
-    src="https://github.com/user-attachments/assets/f594c5d9-44e2-4789-a121-9f368e5539bc"
+    src="![videoLinkedin](https://github.com/user-attachments/assets/fc8b95b6-d94b-4cb4-8a80-f46a6e82d7ec)"
     width="600"
     controls
     playsinline
@@ -97,6 +97,7 @@ Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
     Tu navegador no admite vídeo HTML5.
   </video>
 </p>
+
 
 
 
