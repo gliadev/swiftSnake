@@ -91,6 +91,13 @@ Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
   <img src="https://github.com/user-attachments/assets/c0908d05-4d8a-43b5-8140-f4ab18f05093" width="300"/>
   <img src="https://github.com/user-attachments/assets/5e50f0b3-f7cb-47b2-b483-eb1ed9cafe14" width="300"/>
   <img src="https://github.com/user-attachments/assets/6052d189-66d1-4802-b50b-bbc177f34590" width="300"/>
+  https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74
+</p>
+
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74">
+    🎬 Haz clic aquí para ver una demo en vídeo de SwiftSnake
+  </a>
 </p>
 ---
 
