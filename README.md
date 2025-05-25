@@ -99,6 +99,13 @@ Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
     🎬 Haz clic aquí para ver una demo en vídeo de SwiftSnake
   </a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74">
+    <img src="https://img.shields.io/badge/Demo-SwiftSnake-blue?style=for-the-badge&logo=apple" alt="Ver demo en vídeo" />
+  </a>
+</p>
+
 ---
 
 ## 🙌 ¿Te mola?
