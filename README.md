@@ -82,31 +82,30 @@ Combat Life style.
 
 ---
 
-## 📸 Capturas
+##🎬 Game Demo
 
 Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eec58cf9-b12d-4b3e-84af-db5d4bcc7dca" width="300"/>
-  <img src="https://github.com/user-attachments/assets/c0908d05-4d8a-43b5-8140-f4ab18f05093" width="300"/>
-  <img src="https://github.com/user-attachments/assets/5e50f0b3-f7cb-47b2-b483-eb1ed9cafe14" width="300"/>
-  <img src="https://github.com/user-attachments/assets/6052d189-66d1-4802-b50b-bbc177f34590" width="300"/>
-  https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74
+  <video
+    src="https://github.com/user-attachments/assets/f594c5d9-44e2-4789-a121-9f368e5539bc"
+    width="600"
+    controls
+    playsinline
+    style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.15);"
+  >
+    Tu navegador no admite vídeo HTML5.
+  </video>
 </p>
 
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74">
-    🎬 Haz clic aquí para ver una demo en vídeo de SwiftSnake
-  </a>
-</p>
 
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/03683c12-65b4-49d6-ad58-5268d704ea74">
-    <img src="https://img.shields.io/badge/Demo-SwiftSnake-blue?style=for-the-badge&logo=apple" alt="Ver demo en vídeo" />
-  </a>
-</p>
 
----![videoLinkedin](https://github.com/user-attachments/assets/66d81e8d-9cb5-409c-805a-58c18503f239)
+
+
+
+
+
+
 
 
 ## 🙌 ¿Te mola?
