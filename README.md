@@ -106,7 +106,8 @@ Si jugaste Snake en un Nokia… ya sabes lo que hay 😉
   </a>
 </p>
 
----
+---![videoLinkedin](https://github.com/user-attachments/assets/66d81e8d-9cb5-409c-805a-58c18503f239)
+
 
 ## 🙌 ¿Te mola?
 
