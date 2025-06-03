@@ -1,5 +1,5 @@
 //
-//  GHUDViewModel.swift .swift
+//  GHUDViewModel.swift
 //  swiftSnake
 //
 //  Created by Adolfo on 20/5/25.
