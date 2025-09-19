@@ -10,7 +10,7 @@ import Foundation
 
 import Foundation
 
-class GHUDViewModel: ObservableObject {
+class HUDViewModel: ObservableObject {
     @Published var scoreText: String = "Puntuación: 0"
     @Published var timeText: String = "Tiempo: 00:00"
 
