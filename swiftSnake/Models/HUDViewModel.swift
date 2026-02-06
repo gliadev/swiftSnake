@@ -1,5 +1,5 @@
 //
-//  GHUDViewModel.swift .swift
+//  GHUDViewModel.swift
 //  swiftSnake
 //
 //  Created by Adolfo on 20/5/25.
@@ -7,10 +7,8 @@
 
 import Foundation
 
-
-import Foundation
-
-class HUDViewModel: ObservableObject {
+@MainActor
+class GHUDViewModel: ObservableObject {
     @Published var scoreText: String = "Puntuación: 0"
     @Published var timeText: String = "Tiempo: 00:00"
 

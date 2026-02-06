@@ -16,9 +16,11 @@ struct RankingView: View {
                 .font(.largeTitle)
                 .bold()
                 .padding(.top)
+                .accessibilityAddTraits(.isHeader)
+                .accessibilityLabel("Top 10 Ranking")
 
             if viewModel.hasRecords {
-                List(viewModel.topRecords.prefix(10)) { record in
+                List(Array(viewModel.topRecords.prefix(10).enumerated()), id: \.element.id) { index, record in
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Text(record.name)
@@ -40,6 +42,8 @@ struct RankingView: View {
                             .foregroundColor(.gray)
                     }
                     .padding(.vertical, 4)
+                    .accessibilityElement(children: .combine)
+                    .accessibilityLabel("Puesto \(index + 1): \(record.name), \(record.score) puntos, tiempo \(viewModel.formatTime(record.duration)), eficiencia \(String(format: "%.2f", record.efficiency))")
                 }
                 .listStyle(.insetGrouped)
             } else {
