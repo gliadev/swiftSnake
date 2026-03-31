@@ -10,12 +10,12 @@ import SwiftUI
 import SwiftData
 
 // Enum para las direcciones de la serpiente
-enum Direction {
+enum Direction: Sendable {
     case up, down, left, right
 }
 
 // Estructura para un registro de ranking
-struct GameRecord: Codable, Identifiable {
+struct GameRecord: Codable, Identifiable, Sendable {
     let id: UUID
     let name: String
     let score: Int
@@ -25,7 +25,7 @@ struct GameRecord: Codable, Identifiable {
     var efficiency: Double {
         return duration > 0 ? Double(score) / duration : 0
     }
-    
+
     init(id: UUID = UUID(), name: String, score: Int, duration: TimeInterval, date: Date) {
            self.id = id
            self.name = name
@@ -35,7 +35,8 @@ struct GameRecord: Codable, Identifiable {
        }
 }
 
-// Modelo del juego
+// Modelo del juego — aislado en MainActor para seguridad de concurrencia Swift 6
+@MainActor
 class SnakeGameModel: ObservableObject {
     @Published var snakePositions: [CGPoint] = [CGPoint(x: 100, y: 100)]
     @Published var foodPosition: CGPoint = CGPoint(x: 200, y: 200)
@@ -44,11 +45,11 @@ class SnakeGameModel: ObservableObject {
     @Published var score: Int = 0
     @Published var elapsedTime: TimeInterval = 0
     @Published var ranking: [GameRecord] = []
-    @Environment(\.modelContext) var modelContext
-    private var startTime: Date?
-    private var timeTimer: Timer?
 
-    private var timer: Timer?
+    private var startTime: Date?
+    private var gameLoopTask: Task<Void, Never>?
+    private var timeTrackingTask: Task<Void, Never>?
+
     let gridSize: CGFloat = 20
     let screenWidth: CGFloat = 400  // Ajustar según la pantalla real
     let screenHeight: CGFloat = 800 // Ajustar según la pantalla real
@@ -62,21 +63,36 @@ class SnakeGameModel: ObservableObject {
         foodPosition = CGPoint(x: 200, y: 200)
         direction = .right
         isGameOver = false
-        startTimer()
         score = 0
         elapsedTime = 0
         startTime = Date()
-        timeTimer?.invalidate()
-        timeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            guard let start = self.startTime else { return }
-            self.elapsedTime = Date().timeIntervalSince(start)
+
+        startGameLoop()
+        startTimeTracking()
+    }
+
+    /// Inicia el bucle del juego usando Task estructurado (seguro para Swift 6)
+    private func startGameLoop() {
+        gameLoopTask?.cancel()
+        gameLoopTask = Task { [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .milliseconds(300))
+                guard !Task.isCancelled else { break }
+                self?.moveSnake()
+            }
         }
     }
 
-    func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { _ in
-            self.moveSnake()
+    /// Rastrea el tiempo transcurrido usando Task estructurado
+    private func startTimeTracking() {
+        timeTrackingTask?.cancel()
+        timeTrackingTask = Task { [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(1))
+                guard !Task.isCancelled else { break }
+                guard let self, let start = self.startTime else { continue }
+                self.elapsedTime = Date().timeIntervalSince(start)
+            }
         }
     }
 
@@ -151,10 +167,10 @@ class SnakeGameModel: ObservableObject {
 
     func gameOver() {
         isGameOver = true
-        timer?.invalidate()
-        timeTimer?.invalidate()
+        gameLoopTask?.cancel()
+        timeTrackingTask?.cancel()
     }
-    
+
     /// Guarda un nuevo registro en el ranking si entra en el top 10
     func saveToRanking(name: String, modelContext: ModelContext) {
         let record = ScoreRecord(
@@ -169,11 +185,11 @@ class SnakeGameModel: ObservableObject {
         do {
             try modelContext.save()
         } catch {
-            print("⚠️ Error al guardar en SwiftData: \(error)")
+            print("Error al guardar en SwiftData: \(error)")
         }
     }
 
-        
+
     /// Determina si la puntuación actual merece estar en el top 10
     func shouldShowNameEntry() -> Bool {
         if ranking.count < 10 {
@@ -186,5 +202,9 @@ class SnakeGameModel: ObservableObject {
 
         return score > lowestTop.score || (score == lowestTop.score && elapsedTime < lowestTop.duration)
     }
-}
 
+    deinit {
+        gameLoopTask?.cancel()
+        timeTrackingTask?.cancel()
+    }
+}

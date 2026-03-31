@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class RankingViewModel: ObservableObject {
     @Published var topRecords: [ScoreRecord] = []
 
