@@ -44,7 +44,6 @@ class SnakeGameModel: ObservableObject {
     @Published var score: Int = 0
     @Published var elapsedTime: TimeInterval = 0
     @Published var ranking: [GameRecord] = []
-    @Environment(\.modelContext) var modelContext
     private var startTime: Date?
     private var timeTimer: Timer?
 
